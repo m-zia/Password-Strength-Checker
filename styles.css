@@ -2,44 +2,55 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-}
-
-body {
+  }
+  
+  body {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: lightblue;
-}
+  }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    max-width: 400px;
+    padding: 2em;
+    border: 1px solid black;
+  }
 
-div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
+  #password {
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: 2px solid #999;
+  }
 
-label {
-    margin-bottom: 5px;
-    font-size: 3rem;
-}
+  *:focus {
+    outline-style: none;
+  }
 
-#progress {
-    margin-top: 2rem;
-    font-size: 3rem;
-}
-
-input[type="password"],
-progress {
+  input {
+    display: block;
     width: 100%;
-}
+    box-sizing: border-box;
+    padding: 6px;
+    border: 1px solid #ddd;
+  }
 
-button {
-    align-self: flex-start;
-}
+  #progressBar {
+    height: 20px;
+    width: 100%;
+    margin-top: 0.6em;
+    border-radius: 50px;
+    border: 2px solid black;
+  }
+
+  #progress-bar {
+    width: 0%;
+    height: 100%;
+    transition: width 500ms linear;
+    border-radius: 50px;
+    box-shadow: 0px 1px 5px #555;
+  }
+
+ 
