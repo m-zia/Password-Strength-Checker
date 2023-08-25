@@ -24,6 +24,18 @@ password.addEventListener('keyup', function() {
     progressBar.style.background = "green"; 
     }
 
-    
+    // Update progress bar value
+    progressBar.style.width = progress + "%";
+
+    // Update feedback message
+    let feedback = progress;
+    if (pwd.length < 8) {
+    feedback += " Should be longer";
+    } else if (pwd.length >= 8 && pwd.length < 12) {
+    feedback += " Pretty good";
+    } else {
+    feedback += " Grrrreat!";
+    }
+    document.getElementById("progresslabel").innerHTML = feedback;
 
 });
